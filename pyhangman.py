@@ -1,8 +1,9 @@
 import random
 import hangman_art
-import hangman_words
+# import hangman_words
 
-word_list = hangman_words.word_list
+# word_list = hangman_words.word_list
+word_list = ["camel", "monkey", "puppy"]
 chosen_word = random.choice(word_list)
 end_of_game = False
 lives = 6
@@ -18,6 +19,9 @@ for letter in chosen_word:
 
 while end_of_game == False:
     guess = input("Guess a letter: ").lower()
+
+    if guess in display:
+        print(f'You have already tried "{guess}". Please guess again.')
 
     for index in range(len(chosen_word)):
         if chosen_word[index] == guess:
