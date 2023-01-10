@@ -1,16 +1,13 @@
 import random
 import hangman_art
-# import hangman_words
+import hangman_words
 
-# word_list = hangman_words.word_list
-word_list = ["camel", "monkey", "puppy"]
+word_list = hangman_words.word_list
 chosen_word = random.choice(word_list)
 end_of_game = False
 lives = 6
 
 print(hangman_art.logo)
-#Testing code
-print(f'The solution is {chosen_word}.')
 
 display = []
 
