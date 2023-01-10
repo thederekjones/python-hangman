@@ -24,6 +24,7 @@ while end_of_game == False:
             display[index] = guess
 
     if guess not in chosen_word:
+        print(f'You have chosen "{guess}", but that is not in the word. Please guess again!')
         lives -= 1
         if lives == 0:
             end_of_game = True
