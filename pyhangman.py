@@ -1,6 +1,13 @@
 import random
 import hangman_art
 import hangman_words
+from os import system, name
+
+def clear():
+    if name == "nt":
+        _ = system("cls")
+    else:
+        _ = system("clear")
 
 word_list = hangman_words.word_list
 chosen_word = random.choice(word_list)
@@ -16,6 +23,8 @@ for letter in chosen_word:
 
 while end_of_game == False:
     guess = input("Guess a letter: ").lower()
+
+    clear()
 
     if guess in display:
         print(f'You have already tried "{guess}". Please guess again.')
