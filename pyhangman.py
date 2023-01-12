@@ -3,11 +3,13 @@ import hangman_art
 import hangman_words
 from os import system, name
 
+
 def clear():
     if name == "nt":
         _ = system("cls")
     else:
         _ = system("clear")
+
 
 word_list = hangman_words.word_list
 chosen_word = random.choice(word_list)
@@ -34,7 +36,9 @@ while end_of_game == False:
             display[index] = guess
 
     if guess not in chosen_word:
-        print(f'You have chosen "{guess}", but that is not in the word. Please guess again!')
+        print(
+            f'You have chosen "{guess}", but that is not in the word. Please guess again!'
+        )
         lives -= 1
         if lives == 0:
             end_of_game = True
