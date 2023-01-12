@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import random
 import hangman_art
 import hangman_words
