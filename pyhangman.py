@@ -23,10 +23,13 @@ print(hangman_art.logo)
 display = []
 
 for letter in chosen_word:
-    display.append("_")
+    display += "_"
+
+print(f"{' '.join(display)}")
 
 while end_of_game == False:
-    guess = input("Guess a letter: ").lower()
+
+    guess = input("\nGuess a letter: ").lower()
 
     clear()
 
